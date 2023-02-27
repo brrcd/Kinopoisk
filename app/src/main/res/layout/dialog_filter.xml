@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtViewFilterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginTop="@dimen/base_margin"
+        android:text="@string/filter_title"
+        android:textAppearance="@style/Header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtViewSortTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_margin"
+        android:layout_marginEnd="@dimen/base_margin"
+        android:text="@string/sort_title"
+        android:textAppearance="@style/Header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/chkBoxByRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginTop="@dimen/half_margin"
+        android:text="по рейтингу"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtViewFilterTitle" />
+
+    <TextView
+        android:id="@+id/txtViewFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_margin"
+        android:text="от"
+        app:layout_constraintBottom_toBottomOf="@id/chkBoxByRating"
+        app:layout_constraintStart_toEndOf="@id/chkBoxByRating"
+        app:layout_constraintTop_toTopOf="@id/chkBoxByRating" />
+
+    <NumberPicker
+        android:id="@+id/nmbPckRatingFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/base_margin"
+        app:layout_constraintBottom_toBottomOf="@id/chkBoxByRating"
+        app:layout_constraintStart_toEndOf="@id/chkBoxByRating"
+        app:layout_constraintTop_toTopOf="@id/chkBoxByRating" />
+
+    <TextView
+        android:id="@+id/txtViewTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_margin"
+        android:text="до"
+        app:layout_constraintBottom_toBottomOf="@id/chkBoxByRating"
+        app:layout_constraintStart_toEndOf="@id/nmbPckRatingFrom"
+        app:layout_constraintTop_toTopOf="@id/chkBoxByRating" />
+
+    <NumberPicker
+        android:id="@+id/nmbPckRatingTo"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/base_margin"
+        app:layout_constraintBottom_toBottomOf="@id/chkBoxByRating"
+        app:layout_constraintStart_toEndOf="@id/nmbPckRatingFrom"
+        app:layout_constraintTop_toTopOf="@id/chkBoxByRating" />
+
+    <com.testapp.testkinopoisk.custom.SortByButton
+        android:id="@+id/btnSortByRating"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginEnd="@dimen/base_margin"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_clear"
+        app:layout_constraintBottom_toBottomOf="@id/nmbPckRatingTo"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/nmbPckRatingTo"
+        app:layout_constraintTop_toTopOf="@id/nmbPckRatingTo" />
+
+    <CheckBox
+        android:id="@+id/chkBoxByYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginTop="@dimen/half_margin"
+        android:layout_marginBottom="@dimen/base_margin"
+        android:text="по году"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chkBoxByRating" />
+
+
+    <TextView
+        android:id="@+id/txtViewFromY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_margin"
+        android:text="от"
+        app:layout_constraintBottom_toBottomOf="@id/chkBoxByYear"
+        app:layout_constraintStart_toEndOf="@id/chkBoxByRating"
+        app:layout_constraintTop_toTopOf="@id/chkBoxByYear" />
+
+    <NumberPicker
+        android:id="@+id/nmbPckYearFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/base_margin"
+        app:layout_constraintBottom_toBottomOf="@id/chkBoxByYear"
+        app:layout_constraintStart_toEndOf="@id/chkBoxByRating"
+        app:layout_constraintTop_toTopOf="@id/chkBoxByYear" />
+
+    <TextView
+        android:id="@+id/txtViewToY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_margin"
+        android:text="до"
+        app:layout_constraintBottom_toBottomOf="@id/chkBoxByYear"
+        app:layout_constraintStart_toEndOf="@id/nmbPckRatingFrom"
+        app:layout_constraintTop_toTopOf="@id/chkBoxByYear" />
+
+    <NumberPicker
+        android:id="@+id/nmbPckYearTo"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/base_margin"
+        app:layout_constraintBottom_toBottomOf="@id/chkBoxByYear"
+        app:layout_constraintStart_toEndOf="@id/nmbPckRatingFrom"
+        app:layout_constraintTop_toTopOf="@id/chkBoxByYear" />
+
+    <com.testapp.testkinopoisk.custom.SortByButton
+        android:id="@+id/btnSortByYear"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginEnd="@dimen/base_margin"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_clear"
+        app:layout_constraintBottom_toBottomOf="@id/nmbPckYearTo"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/nmbPckYearTo"
+        app:layout_constraintTop_toTopOf="@id/nmbPckYearTo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

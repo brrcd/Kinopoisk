@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@id/movieListNavigation"
+        android:icon="@drawable/ic_list"
+        android:title="@string/movie_list_tab" />
+    <item
+        android:id="@id/searchNavigation"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search_tab" />
+
+</menu>

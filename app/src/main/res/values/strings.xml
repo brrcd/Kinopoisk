@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Kinopoisk</string>
+    <string name="image_poster_preview">Image poster preview</string>
+    <string name="movie_list_tab">Movie list</string>
+    <string name="search_tab">Search</string>
+    <string name="search_hint">Enter movie title</string>
+    <string name="add_movie_to_list">Добавить фильм</string>
+    <string name="remove_movie_from_list">Удалить фильм</string>
+    <string name="filter_title">Фильтр</string>
+    <string name="sort_title">Сортировка</string>
+</resources>

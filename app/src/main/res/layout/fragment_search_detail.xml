@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_bottom_sheet_dialog">
+
+    <ImageView
+        android:id="@+id/imgViewBackdrop"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtViewTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/base_margin"
+        android:layout_marginTop="@dimen/base_margin"
+        android:maxLines="2"
+        android:textAppearance="@style/Header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgViewBackdrop"
+        tools:text="@tools:sample/lorem/random" />
+
+    <TextView
+        android:id="@+id/txtViewYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/base_margin"
+        android:layout_marginTop="@dimen/base_margin"
+        android:maxLines="1"
+        android:textAppearance="@style/TextViewBody"
+        android:minEms="3"
+        app:layout_constraintEnd_toStartOf="@id/txtGenres"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtViewTitle"
+        tools:text="1976" />
+
+    <TextView
+        android:id="@+id/txtGenres"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/base_margin"
+        android:layout_marginTop="@dimen/base_margin"
+        android:ellipsize="end"
+        android:textAlignment="textEnd"
+        android:maxLines="1"
+        android:textAppearance="@style/TextViewBody"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtViewYear"
+        app:layout_constraintTop_toBottomOf="@id/txtViewTitle"
+        tools:text="Ужасы, Фильм, Триллер" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/base_margin"
+        android:layout_marginTop="@dimen/base_margin"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@id/btnAddMovieToList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtViewYear">
+
+        <TextView
+            android:id="@+id/txtViewDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            tools:text="@tools:sample/lorem/random" />
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddMovieToList"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="@dimen/base_margin"
+        android:layout_marginBottom="20dp"
+        android:text="@string/add_movie_to_list"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

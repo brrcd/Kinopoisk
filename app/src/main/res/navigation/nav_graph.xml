@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/movieListNavigation">
+
+    <navigation
+        android:id="@+id/movieListNavigation"
+        app:startDestination="@id/movieListFragment">
+
+        <fragment
+            android:id="@+id/movieListFragment"
+            android:name="com.testapp.testkinopoisk.movielist.MovieListFragment" />
+
+        <dialog
+            android:id="@+id/movieDetailFragment"
+            android:name="com.testapp.testkinopoisk.movielist.detail.MovieDetailBottomSheetFragment">
+        </dialog>
+    </navigation>
+
+    <navigation
+        android:id="@+id/searchNavigation"
+        app:startDestination="@id/searchFragment">
+
+        <fragment
+            android:id="@+id/searchFragment"
+            android:name="com.testapp.testkinopoisk.search.SearchFragment" />
+
+        <dialog
+            android:id="@+id/searchDetailFragment"
+            android:name="com.testapp.testkinopoisk.search.detail.SearchDetailBottomSheetFragment">
+        </dialog>
+    </navigation>
+
+</navigation>
