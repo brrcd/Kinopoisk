@@ -14,7 +14,7 @@ class RemoteSourceImpl(
 	private val apiClient: Api
 ) : RemoteSource {
 	
-	private val token = "CX2VYGR-PR14HJP-KEEBK6S-TAK7Q8R"
+	private val token = "EBSX0KJ-Q0S4CFJ-JMF466P-GJ9V4AM"
 	
 	override fun searchMoviesByName(
 		name: String
