@@ -1,4 +1,4 @@
-package com.testapp.data.model
+package com.testapp.repository.model
 
 import android.os.Parcelable
 import com.testapp.data.model.entity.GenreEntity
@@ -16,4 +16,8 @@ fun GenreResponse.toGenre() = Genre(
 
 fun GenreEntity.toGenre() = Genre(
 	name = this.name ?: ""
+)
+
+fun Genre.toGenreEntity() = GenreEntity(
+	name = this.name
 )

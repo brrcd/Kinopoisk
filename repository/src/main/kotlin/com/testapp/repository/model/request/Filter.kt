@@ -1,4 +1,4 @@
-package com.testapp.data.model
+package com.testapp.repository.model.request
 
 
 data class Filter(

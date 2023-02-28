@@ -1,12 +1,13 @@
 plugins {
 	id("com.android.library")
 	id("org.jetbrains.kotlin.android")
+	id("kotlin-parcelize")
 	id("kotlin-kapt")
 	kotlin("plugin.serialization")
 }
 
 android {
-	namespace = "com.testapp.data"
+	namespace = "com.testapp.di"
 	compileSdk = Android.compileSdk
 	
 	defaultConfig{
@@ -17,6 +18,7 @@ android {
 		sourceCompatibility = JavaVersion.VERSION_1_8
 		targetCompatibility = JavaVersion.VERSION_1_8
 	}
+	
 	kotlinOptions {
 		jvmTarget = "1.8"
 	}
@@ -24,16 +26,10 @@ android {
 
 dependencies {
 	
-	implementation(Deps.Retrofit.core)
-	implementation(Deps.Retrofit.gson)
-	implementation(Deps.Retrofit.logging)
+	implementation(project(":data"))
+	implementation(project(":repository"))
 	
-	implementation(Deps.Kotlin.serialization)
-	
-	implementation(Deps.Coroutines.core)
+	implementation(Deps.Koin.core)
 	
 	implementation(Deps.Room.core)
-	implementation(Deps.Room.ktx)
-	annotationProcessor(Deps.Room.annotations)
-	kapt(Deps.Room.kapt)
 }

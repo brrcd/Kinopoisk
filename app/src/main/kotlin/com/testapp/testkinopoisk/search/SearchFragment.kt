@@ -11,8 +11,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.paging.PagingData
-import com.testapp.data.model.Filter
-import com.testapp.data.model.Movie
+import com.testapp.repository.model.Movie
+import com.testapp.repository.model.request.Filter
 import com.testapp.testkinopoisk.MOVIE_DATA_TAG
 import com.testapp.testkinopoisk.R
 import com.testapp.testkinopoisk.base.BaseFragment

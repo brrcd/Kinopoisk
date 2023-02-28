@@ -1,7 +1,7 @@
 package com.testapp.testkinopoisk.movielist
 
 import androidx.recyclerview.widget.DiffUtil
-import com.testapp.data.model.Movie
+import com.testapp.repository.model.Movie
 
 // диффутил колбэк для списка фильмов из БД
 class MovieListDiffUtil(

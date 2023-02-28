@@ -44,7 +44,8 @@ android {
 
 
 dependencies {
-    implementation(project(":data"))
+    implementation(project(":di"))
+    implementation(project(":repository"))
     
     implementation(Deps.Android.core)
     implementation(Deps.Android.appCompat)

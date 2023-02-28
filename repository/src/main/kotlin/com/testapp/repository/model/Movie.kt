@@ -1,4 +1,4 @@
-package com.testapp.data.model
+package com.testapp.repository.model
 
 import android.os.Parcelable
 import com.testapp.data.model.entity.MovieEntity
@@ -39,4 +39,15 @@ fun MovieEntity.toMovie() = Movie(
 	poster = this.poster?.toPoster() ?: Poster(),
 	backdrop = this.backdrop?.toBackdrop() ?: Backdrop(),
 	genres = this.genres?.map { it.toGenre() } ?: emptyList()
+)
+
+fun Movie.toMovieEntity() = MovieEntity(
+	id = this.id,
+	name = this.name,
+	description = this.description,
+	year = this.year,
+	rating = this.rating.toRatingEntity(),
+	poster = this.poster.toPosterEntity(),
+	backdrop = this.backdrop.toBackdropEntity(),
+	genres = this.genres.map { it.toGenreEntity() }
 )

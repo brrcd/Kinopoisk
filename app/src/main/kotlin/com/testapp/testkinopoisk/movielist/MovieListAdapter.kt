@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.testapp.data.model.Movie
+import com.testapp.repository.model.Movie
 import com.testapp.testkinopoisk.R
 import com.testapp.testkinopoisk.databinding.ItemMovieBinding
 

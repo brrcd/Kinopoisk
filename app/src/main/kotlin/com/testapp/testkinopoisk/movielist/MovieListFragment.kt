@@ -5,7 +5,7 @@ import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.testapp.data.model.Movie
+import com.testapp.repository.model.Movie
 import com.testapp.testkinopoisk.MOVIE_DATA_TAG
 import com.testapp.testkinopoisk.R
 import com.testapp.testkinopoisk.base.BaseFragment

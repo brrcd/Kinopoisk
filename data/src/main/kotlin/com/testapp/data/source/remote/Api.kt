@@ -19,7 +19,7 @@ interface Api {
 	): SearchResponse
 	
 	@GET("/movie")
-	suspend fun searchMoviesWithFilter(
+	suspend fun searchMoviesWithFilterPaging(
 		@QueryMap filterMap: HashMap<String, String>,
 		@Query("token") token: String,
 		@Query("page") page: Int

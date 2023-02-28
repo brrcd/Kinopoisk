@@ -4,7 +4,6 @@ import androidx.room.ColumnInfo
 import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.testapp.data.model.Movie
 
 // Embedded для вложенных сущностей
 // TypeConverter для кастомных сущеностей типа списков сущностей
@@ -19,15 +18,4 @@ data class MovieEntity(
 	@Embedded("poster") val poster: PosterEntity?,
 	@Embedded("backdrop") val backdrop: BackdropEntity?,
 	@ColumnInfo("genres") val genres: List<GenreEntity>?
-)
-
-fun Movie.toMovieEntity() = MovieEntity(
-	id = this.id,
-	name = this.name,
-	description = this.description,
-	year = this.year,
-	rating = this.rating.toRatingEntity(),
-	poster = this.poster.toPosterEntity(),
-	backdrop = this.backdrop.toBackdropEntity(),
-	genres = this.genres.map { it.toGenreEntity() }
 )

@@ -1,12 +1,12 @@
 plugins {
 	id("com.android.library")
 	id("org.jetbrains.kotlin.android")
+	id("kotlin-parcelize")
 	id("kotlin-kapt")
-	kotlin("plugin.serialization")
 }
 
 android {
-	namespace = "com.testapp.data"
+	namespace = "com.testapp.repository"
 	compileSdk = Android.compileSdk
 	
 	defaultConfig{
@@ -23,17 +23,13 @@ android {
 }
 
 dependencies {
+	implementation(project(":data"))
 	
-	implementation(Deps.Retrofit.core)
-	implementation(Deps.Retrofit.gson)
-	implementation(Deps.Retrofit.logging)
+	implementation(Deps.Android.paging)
 	
 	implementation(Deps.Kotlin.serialization)
 	
-	implementation(Deps.Coroutines.core)
+	implementation(Deps.Retrofit.core)
 	
-	implementation(Deps.Room.core)
-	implementation(Deps.Room.ktx)
-	annotationProcessor(Deps.Room.annotations)
-	kapt(Deps.Room.kapt)
+	implementation(Deps.Coroutines.core)
 }

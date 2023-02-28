@@ -3,9 +3,8 @@ package com.testapp.testkinopoisk.movielist
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.testapp.data.model.Movie
-import com.testapp.data.model.toMovie
-import com.testapp.data.source.Repository
+import com.testapp.repository.Repository
+import com.testapp.repository.model.Movie
 import com.testapp.testkinopoisk.SingleLiveEvent
 import com.testapp.testkinopoisk.base.BaseViewModel
 import kotlinx.coroutines.Dispatchers
@@ -33,7 +32,7 @@ class MovieListViewModel : BaseViewModel(), KoinComponent {
 	fun getMovieList() {
 		viewModelScope.launch {
 			repository.getSavedMovies().collect() {
-				_movieListData.postValue(it.map { entity -> entity.toMovie() })
+				_movieListData.postValue(it)
 			}
 		}
 	}

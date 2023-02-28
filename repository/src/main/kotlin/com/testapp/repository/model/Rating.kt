@@ -1,4 +1,4 @@
-package com.testapp.data.model
+package com.testapp.repository.model
 
 import android.os.Parcelable
 import com.testapp.data.model.entity.RatingEntity
@@ -19,6 +19,11 @@ fun RatingResponse.toRating() = Rating(
 fun RatingEntity.toRating() = Rating(
 	kp = this.kp ?: 0.0,
 	imdb = this.imdb ?: 0.0
+)
+
+fun Rating.toRatingEntity() = RatingEntity(
+	kp = this.kp,
+	imdb = this.imdb
 )
 
 fun Double.onePlace(): Double = ((this * 10).toInt()).toDouble() / 10

@@ -1,4 +1,4 @@
-package com.testapp.data.model
+package com.testapp.repository.model
 
 import android.os.Parcelable
 import com.testapp.data.model.response.SearchResponse

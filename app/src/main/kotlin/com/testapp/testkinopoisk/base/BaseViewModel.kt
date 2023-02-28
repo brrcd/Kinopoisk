@@ -2,7 +2,7 @@ package com.testapp.testkinopoisk.base
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import com.testapp.data.model.response.ApiError
+import com.testapp.repository.model.ApiError
 import com.testapp.testkinopoisk.SingleLiveEvent
 
 abstract class BaseViewModel : ViewModel() {

@@ -1,6 +1,6 @@
-package com.testapp.data.source.remote
+package com.testapp.repository
 
-import com.testapp.data.model.response.ApiError
+import com.testapp.repository.model.ApiError
 
 // класс для передачи результата запроса в сеть
 sealed class RequestResult<out V> {

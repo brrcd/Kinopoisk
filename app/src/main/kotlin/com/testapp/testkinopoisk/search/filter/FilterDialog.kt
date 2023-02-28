@@ -7,9 +7,9 @@ import android.os.Bundle
 import android.widget.CheckBox
 import android.widget.NumberPicker
 import androidx.fragment.app.DialogFragment
-import com.testapp.data.model.Filter
-import com.testapp.data.model.SearchField
-import com.testapp.data.model.SortField
+import com.testapp.repository.model.request.Filter
+import com.testapp.repository.model.request.SearchField
+import com.testapp.repository.model.request.SortField
 import com.testapp.testkinopoisk.R
 import com.testapp.testkinopoisk.custom.SortByButton
 import kotlin.properties.Delegates

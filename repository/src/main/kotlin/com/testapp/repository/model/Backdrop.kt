@@ -1,4 +1,4 @@
-package com.testapp.data.model
+package com.testapp.repository.model
 
 import android.os.Parcelable
 import com.testapp.data.model.entity.BackdropEntity
@@ -19,4 +19,9 @@ fun BackdropResponse.toBackdrop() = Backdrop(
 fun BackdropEntity.toBackdrop() = Backdrop(
 	url = this.url ?: "",
 	previewUrl = this.previewUrl ?: ""
+)
+
+fun Backdrop.toBackdropEntity() = BackdropEntity(
+	url = this.url,
+	previewUrl = this.previewUrl
 )

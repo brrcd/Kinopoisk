@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.navigation.navGraphViewModels
 import coil.load
-import com.testapp.data.model.Movie
+import com.testapp.repository.model.Movie
 import com.testapp.testkinopoisk.MOVIE_DATA_TAG
 import com.testapp.testkinopoisk.R
 import com.testapp.testkinopoisk.base.BaseBottomSheetFragment

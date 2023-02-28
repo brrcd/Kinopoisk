@@ -1,4 +1,4 @@
-package com.testapp.data.model
+package com.testapp.repository.model
 
 import android.os.Parcelable
 import com.testapp.data.model.entity.PosterEntity
@@ -19,4 +19,9 @@ fun PosterResponse.toPoster() = Poster(
 fun PosterEntity.toPoster() = Poster(
 	url = this.url ?: "",
 	previewUrl = this.previewUrl ?: ""
+)
+
+fun Poster.toPosterEntity() = PosterEntity(
+	url = this.url,
+	previewUrl = this.previewUrl
 )
