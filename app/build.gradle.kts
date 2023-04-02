@@ -61,8 +61,6 @@ dependencies {
     
     implementation(Deps.Coil.core)
     
-    implementation(Deps.Koin.core)
-    
     implementation(Deps.Room.core)
     
     implementation(Deps.Navigation.core)

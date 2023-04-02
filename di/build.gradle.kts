@@ -29,7 +29,7 @@ dependencies {
 	implementation(project(":data"))
 	implementation(project(":repository"))
 	
-	implementation(Deps.Koin.core)
+	api(Deps.Koin.core)
 	
 	implementation(Deps.Room.core)
 }

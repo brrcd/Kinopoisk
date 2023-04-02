@@ -18,8 +18,7 @@ abstract class BaseRepo {
 			if (response.isSuccessful) {
 				return RequestResult.Success(response.body()!!.mapper())
 			} else {
-				processServerError(response)
-				return RequestResult.Error(ApiError(errorMessage = response.message()))
+				return processServerError(response)
 			}
 		} catch (e: Exception) {
 			val errorMessage = e.message ?: "unknown error"

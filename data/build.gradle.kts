@@ -23,7 +23,6 @@ android {
 }
 
 dependencies {
-	
 	implementation(Deps.Retrofit.core)
 	implementation(Deps.Retrofit.gson)
 	implementation(Deps.Retrofit.logging)
