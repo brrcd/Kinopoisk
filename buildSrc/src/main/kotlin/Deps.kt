@@ -12,7 +12,7 @@ object Deps {
 	
 	object Android {
 		const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
-		const val core = "androidx.core:core-ktx:+"
+		const val core = "androidx.core:core-ktx:1.9.0"
 		const val activityKtx = "androidx.activity:activity-ktx:1.6.1"
 		const val fragmentKtx = "androidx.fragment:fragment-ktx:1.5.5"
 		const val appCompat = "androidx.appcompat:appcompat:1.6.1"
